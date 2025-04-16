@@ -8,6 +8,11 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
   "dependencies": {
     "next": "15.3.0",
     "react": "^19.0.0",
