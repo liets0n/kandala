@@ -10,7 +10,9 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import reactHooks from 'eslint-plugin-react-hooks'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import importPlugin from 'eslint-plugin-import'
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn'
+import pluginNext from '@next/eslint-plugin-next'
+import react from 'eslint-plugin-react'
 
 export default defineConfig([
   tseslint.configs.recommended,
@@ -22,9 +24,32 @@ export default defineConfig([
   importPlugin.flatConfigs.recommended,
   eslintPluginUnicorn.configs.recommended,
   {
+    plugins: {
+      '@next/next': pluginNext
+    }
+  },
+  {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-    plugins: { js },
-    extends: ['js/recommended', 'plugin:@next/next/recommended']
+    plugins: { js, react },
+    extends: ['js/recommended'],
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        ...globals.browser
+      }
+    },
+    rules: {
+      ...pluginNext.configs.recommended.rules
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
   },
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
