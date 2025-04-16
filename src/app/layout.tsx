@@ -1,20 +1,19 @@
-import type { Metadata } from "next";
+import React from 'react'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Kandala",
-  description: "Transforme Seu Cuidado Pessoal com Inteligência Digital",
-};
+  title: 'Kandala',
+  description: 'Transforme Seu Cuidado Pessoal com Inteligência Digital'
+}
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="pt">
-      <body>
-        {children}
-      </body>
+    <html lang='pt'>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
