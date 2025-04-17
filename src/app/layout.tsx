@@ -2,7 +2,7 @@ import React from 'react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Kandala',
+  title: 'Kandala - Landing Page',
   description: 'Transforme Seu Cuidado Pessoal com Inteligência Digital'
 }
 
