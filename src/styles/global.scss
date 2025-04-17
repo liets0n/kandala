@@ -1,0 +1,30 @@
+@use 'palette' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-default: var(--font-poppins);
+}
+
+html, body {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $black;
+  background-color: $white;
+}
+
+body, ul, ol, li,
+textarea, input, select, button {
+  font-family: var(--font-default), sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: normal;
+}
