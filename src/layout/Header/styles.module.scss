@@ -1,0 +1,117 @@
+@use './../../styles/palette' as *;
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  .container__list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+
+    .list__item--logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 1rem;
+
+      .logo {
+        width: 5.938rem;
+        height: auto;
+      }
+
+      &::after {
+        content: '';
+        width: 2px;
+        height: 2rem;
+        border-radius: 4%;
+        background-color: $black;
+      }
+    }
+
+    .list__item {
+      list-style: none;
+
+      .item__link {
+        color: $black;
+        text-decoration: none;
+      }
+
+      .link__text { }
+
+      &:hover {
+        .item__link {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .container__rightSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.5rem;
+
+    .rightSide__link {
+      width: max-content;
+      height: 3.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 1rem;
+      background-color: $white;
+      text-decoration: none;
+      padding-left: 1rem;
+      padding-right: 0.3rem;
+      border-radius: 2rem;
+
+      .link__text {
+        color: $black;
+      }
+
+      .link__iconContainer {
+        width: 2.75rem;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: $white;
+        background-color: $primary;
+
+        .iconContainer__icon { }
+      }
+    }
+
+    .rightSide__menu {
+      font-size: 2rem;
+      cursor: pointer;
+      display: none;
+    }
+  }
+
+  @media (width <= 1044px) {
+    padding: 1rem 1.5rem;
+
+    .container__list {
+      .list__item {
+        display: none;
+      }
+
+      .list__item--logo {
+        display: block;
+      }
+    }
+
+    .container__rightSide {
+      .rightSide__menu {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'

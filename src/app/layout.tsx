@@ -1,6 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+
+import { Header } from './../layout'
 
 import './../styles/global.scss'
 
@@ -23,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt' className={poppins.variable}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
