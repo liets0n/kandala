@@ -1,10 +1,13 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react'
+
+import { HeroSection } from './../components'
 
 function Home() {
   return (
-    <>
-      <h1>Kandala</h1>
-    </>
+    <main>
+      <HeroSection />
+    </main>
   )
 }
 
