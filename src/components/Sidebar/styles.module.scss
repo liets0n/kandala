@@ -1,0 +1,52 @@
+@use './../../styles/palette' as *;
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background-color: $pink-50;
+  z-index: 1024;
+
+  .container__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+
+    .header__logo {
+      width: 5.938rem;
+      height: auto;
+    }
+
+    .header__icon {
+    }
+  }
+
+  .container__list {
+    .list__item {
+      list-style: none;
+      padding: 1.5rem;
+      border-top: 1px solid $pink-100;
+
+      .item__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        color: $black;
+
+        .link__text {
+          font: 1.125rem;
+          font-weight: 500;
+        }
+
+        .link__icon {
+        }
+      }
+    }
+  }
+}
