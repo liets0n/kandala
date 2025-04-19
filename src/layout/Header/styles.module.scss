@@ -31,7 +31,7 @@
         content: '';
         width: 2px;
         height: 2rem;
-        border-radius: 4%;
+        border-radius: 8px;
         background-color: $black;
       }
     }
@@ -44,8 +44,7 @@
         text-decoration: none;
       }
 
-      .link__text {
-      }
+      .link__text { }
 
       &:hover {
         .item__link {
@@ -88,8 +87,7 @@
         color: $white;
         background-color: $primary;
 
-        .iconContainer__icon {
-        }
+        .iconContainer__icon { }
       }
     }
 
@@ -116,6 +114,16 @@
     .container__rightSide {
       .rightSide__menu {
         display: block;
+      }
+    }
+  }
+
+  @media (width <= 439px) {
+    padding: 1.5rem 1rem;
+
+    .container__rightSide {
+      .rightSide__link {
+        display: none;
       }
     }
   }

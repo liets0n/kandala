@@ -12,7 +12,9 @@ function Header() {
     <nav className={styles.container}>
       <ul className={styles.container__list}>
         <li className={`${styles['list__item']} ${styles['list__item--logo']}`}>
-          <Image src={Logo} alt='Logo' className={styles['logo']} />
+          <Link href='/'>
+            <Image src={Logo} alt='Logo' className={styles['logo']} />
+          </Link>
         </li>
 
         <li className={styles['list__item']}>
