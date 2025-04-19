@@ -16,44 +16,44 @@ function Header() {
         </li>
 
         <li className={styles['list__item']}>
-          <Link href='#home' className={styles['item__link']}>
+          <Link href='/#home' className={styles['item__link']}>
             <p className={styles['link__text']}>Home</p>
           </Link>
         </li>
 
         <li className={styles['list__item']}>
-          <Link href='#whoweare' className={styles['item__link']}>
+          <Link href='/#whoweare' className={styles['item__link']}>
             <p className={styles['link__text']}>Quem Somos</p>
           </Link>
         </li>
 
         <li className={styles['list__item']}>
-          <Link href='#ourservices' className={styles['item__link']}>
+          <Link href='/#ourservices' className={styles['item__link']}>
             <p className={styles['link__text']}>Nossos Serviços</p>
           </Link>
         </li>
 
         <li className={styles['list__item']}>
-          <Link href='#howitworks' className={styles['item__link']}>
+          <Link href='/#howitworks' className={styles['item__link']}>
             <p className={styles['link__text']}>Como Funciona</p>
           </Link>
         </li>
 
         <li className={styles['list__item']}>
-          <Link href='#testimonials' className={styles['item__link']}>
+          <Link href='/#testimonials' className={styles['item__link']}>
             <p className={styles['link__text']}>Depoimentos</p>
           </Link>
         </li>
 
         <li className={styles['list__item']}>
-          <Link href='#faqs' className={styles['item__link']}>
+          <Link href='/#faqs' className={styles['item__link']}>
             <p className={styles['link__text']}>FAQ&apos;s</p>
           </Link>
         </li>
       </ul>
 
       <div className={styles['container__rightSide']}>
-        <Link href='#contact' className={styles['rightSide__link']}>
+        <Link href='/#contact' className={styles['rightSide__link']}>
           <p className={styles['link__text']}>Contactos</p>
 
           <span className={styles['link__iconContainer']}>
