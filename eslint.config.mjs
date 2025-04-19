@@ -42,7 +42,8 @@ export default defineConfig([
       }
     },
     rules: {
-      ...pluginNext.configs.recommended.rules
+      ...pluginNext.configs.recommended.rules,
+      'import/no-unresolved': 'off'
     },
     settings: {
       react: {
