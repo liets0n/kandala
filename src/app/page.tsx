@@ -1,13 +1,14 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react'
 
-import { HeroSection, Brands, Footer } from './../components'
+import { HeroSection, Brands, WhoWeAre, Footer } from './../components'
 
 function Home() {
   return (
     <main>
       <HeroSection />
       <Brands />
+      <WhoWeAre />
       <Footer />
     </main>
   )
