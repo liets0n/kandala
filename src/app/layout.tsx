@@ -9,7 +9,7 @@ import { Header } from './../layout'
 import './../styles/global.scss'
 
 export const metadata: Metadata = {
-  title: 'Kandala - Landing Page',
+  title: 'Kandala',
   description: 'Transforme Seu Cuidado Pessoal com Inteligência Digital'
 }
 
