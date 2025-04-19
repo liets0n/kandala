@@ -1,6 +1,12 @@
 import React from 'react'
 
-import { HeroSection, Brands, WhoWeAre, Footer } from './../components'
+import {
+  HeroSection,
+  Brands,
+  WhoWeAre,
+  Footer,
+  OurServices
+} from './../components'
 
 function Home() {
   return (
@@ -8,6 +14,7 @@ function Home() {
       <HeroSection />
       <Brands />
       <WhoWeAre />
+      <OurServices />
       <Footer />
     </main>
   )

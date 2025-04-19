@@ -1,0 +1,77 @@
+@use './../../styles/palette' as *;
+
+.container {
+  margin-top: 10.375rem;
+  padding: 0 2rem;
+
+  .container__title {
+    font-size: 1.625rem;
+    color: $primary;
+    font-family: var(--font-signatie);
+  }
+
+  .container__subtitle {
+    width: 37.438rem;
+    font-size: 3.5rem;
+    font-family: var(--font-miollan);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .container__cards {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .cards__item {
+      width: 24.313rem;
+      height: 27.375rem;
+      background-color: $gray-50;
+      border-radius: 8px;
+      list-style: none;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .item__icon {
+        color: $gray-100;
+      }
+
+      .item__texts {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .texts__title {
+          font-weight: 500;
+          line-height: 43px;
+        }
+
+        .texts__description {
+          font-size: 14px;
+          line-height: 21px;
+          font-weight: 100;
+          color: $gray-100;
+        }
+      }
+    }
+  }
+
+  .container__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+
+    .buttons__item {
+      width: 2.75rem;
+      height: 2.75rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      border-radius: 100%;
+
+      .item__icon { }
+    }
+  }
+}
