@@ -6,6 +6,7 @@ import {
   WhoWeAre,
   OurServices,
   HowItWorks,
+  DownloadSection,
   Footer
 } from './../components'
 
@@ -17,6 +18,7 @@ function Home() {
       <WhoWeAre />
       <OurServices />
       <HowItWorks />
+      <DownloadSection />
       <Footer />
     </main>
   )
