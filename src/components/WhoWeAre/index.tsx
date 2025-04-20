@@ -11,14 +11,14 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 
 import styles from './styles.module.scss'
-import Image1 from './../../assets/images/image1.png'
+import People_image from './../../assets/images/people_with_lampshades_on_their_heads.png'
 
 function WhoWeAre() {
   return (
     <section id='whoweare' className={styles['container']}>
       <div className={styles['content']}>
         <Image
-          src={Image1}
+          src={People_image}
           alt='Image 1'
           className={styles['content__image']}
         />

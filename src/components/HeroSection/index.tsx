@@ -3,15 +3,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import styles from './styles.module.scss'
-import Pictore1 from './../../assets/images/Pictor1.png'
-import Pictore2 from './../../assets/images/Pictor2.png'
-import Pictore3 from './../../assets/images/Pictor3.png'
-import Pictore4 from './../../assets/images/Pictor4.png'
-import Pictore5 from './../../assets/images/Pictor5.png'
-import Pictore6 from './../../assets/images/Pictor6.png'
+import Pictore_1 from './../../assets/images/heroSection/pictor_1.png'
+import Pictore_2 from './../../assets/images/heroSection/pictor_2.png'
+import Pictore_3 from './../../assets/images/heroSection/pictor_3.png'
+import Pictore_4 from './../../assets/images/heroSection/pictor_4.png'
+import Pictore_5 from './../../assets/images/heroSection/pictor_5.png'
+import Pictore_6 from './../../assets/images/heroSection/pictor_6.png'
 import AppStore from './../../assets/images/appstore.svg'
 import GooglePay from './../../assets/images/googleplay.svg'
-import Mobile_Mockup from './../../assets/images/Mobile_Phone_Mockup.png'
+import Mobile_Mockup from './../../assets/images/heroSection/mobile_phone_mockup.png'
 
 function HeroSection() {
   return (
@@ -36,19 +36,19 @@ function HeroSection() {
         <div className={styles['content__album']}>
           <div className={styles['album__left']}>
             <Image
-              src={Pictore1}
+              src={Pictore_1}
               alt='Pictore 1'
               className={styles['left__pictor']}
             />
 
             <Image
-              src={Pictore2}
+              src={Pictore_2}
               alt='Pictore 2'
               className={styles['left__pictor']}
             />
 
             <Image
-              src={Pictore3}
+              src={Pictore_3}
               alt='Pictore 3'
               className={styles['left__pictor']}
             />
@@ -68,25 +68,25 @@ function HeroSection() {
             <Image
               src={Mobile_Mockup}
               alt='Mobile Phone Mockup'
-              className={`${styles['middle__mockupPictor']}`}
+              className={`${styles['middle__mockup']}`}
             />
           </div>
 
           <div className={styles['album__right']}>
             <Image
-              src={Pictore4}
+              src={Pictore_4}
               alt='Pictore 4'
               className={styles['right__pictor']}
             />
 
             <Image
-              src={Pictore5}
+              src={Pictore_5}
               alt='Pictore 5'
               className={styles['right__pictor']}
             />
 
             <Image
-              src={Pictore6}
+              src={Pictore_6}
               alt='Pictore 6'
               className={styles['right__pictor']}
             />

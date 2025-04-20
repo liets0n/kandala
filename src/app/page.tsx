@@ -4,8 +4,9 @@ import {
   HeroSection,
   Brands,
   WhoWeAre,
-  Footer,
-  OurServices
+  OurServices,
+  HowItWorks,
+  Footer
 } from './../components'
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
       <Brands />
       <WhoWeAre />
       <OurServices />
+      <HowItWorks />
       <Footer />
     </main>
   )
