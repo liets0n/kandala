@@ -1,0 +1,164 @@
+@use './../../styles/palette' as *;
+
+.container {
+  margin-top: 10.375rem;
+  padding: 0 2rem;
+
+  .container__title {
+    font-size: 1.625rem;
+    color: $primary;
+    font-family: var(--font-signatie);
+  }
+
+  .container__contextWrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .container__subtitle {
+      max-width: 47.125rem;
+      font-size: 3.5rem;
+      font-family: var(--font-miollan);
+    }
+
+    .container__buttons {
+      display: flex;
+      align-items: center;
+
+      .buttons__item {
+        width: 2.75rem;
+        height: 2.75rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 100%;
+
+        .item__icon { }
+      }
+    }
+  }
+
+  .container__cards {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3.875rem;
+
+    .cards__item {
+      position: relative;
+      width: 24.313rem;
+      height: 43.25rem;
+      list-style: none;
+      border-radius: 2rem;
+      background-color: $pink-50;
+
+      .item__context {
+        padding: 1.5rem;
+
+        .context__top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .top__topics {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .topics__year,
+            .topics__position {
+              font-size: 0.875rem;
+              font-weight: 500;
+              padding: 0.5rem 0.75rem;
+              background-color: $white;
+              border-radius: 10rem;
+            }
+          }
+
+          .top__logo {
+            width: 1.688rem;
+            height: 1.563rem;
+          }
+        }
+      }
+
+      .context__name {
+        font-size: 2.625rem;
+        font-family: var(--font-miollan);
+        margin-top: 2rem;
+      }
+
+      .context__description {
+        font-size: 0.875rem;
+        font-weight: 100;
+        margin-top: 1.5rem;
+      }
+
+      .context__reviews {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+
+        .reviews__icon {
+          color: $primary;
+        }
+
+        .reviews__number,
+        .reviews__text {
+          font-size: 0.875rem;
+          line-height: 1rem;
+        }
+
+        .reviews__number { }
+
+        .reviews__text {
+          color: $gray-100;
+        }
+      }
+
+      .item__pictor {
+        width: 100%;
+        height: 25.5rem;
+        margin-top: 0.9rem;
+      }
+
+      .item__link {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        width: max-content;
+        height: 3.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+        border:1px solid rgba(255, 255, 255, 0.18);
+        text-decoration: none;
+        padding-left: 1rem;
+        padding-right: 0.3rem;
+        border-radius: 2rem;
+
+        .link__text {
+          color: $white;
+        }
+
+        .link__iconContainer {
+          width: 2.75rem;
+          height: 2.75rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          color: $primary;
+          background-color: $white;
+
+          .iconContainer__icon { }
+        }
+      }
+    }
+  }
+}
