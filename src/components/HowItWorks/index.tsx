@@ -7,7 +7,7 @@ import Image_1 from './../../assets/images/howItWorks/image_1.png'
 
 function HowItWorks() {
   return (
-    <section id='ourservices' className={styles['container']}>
+    <section id='howitworks' className={styles['container']}>
       <h1 className={styles['container__title']}>Como Funciona?</h1>
 
       <h2 className={styles['container__subtitle']}>
