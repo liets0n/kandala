@@ -8,6 +8,7 @@ import {
   HowItWorks,
   DownloadSection,
   OurTeam,
+  Metrics,
   Footer
 } from './../components'
 
@@ -21,6 +22,7 @@ function Home() {
       <HowItWorks />
       <DownloadSection />
       <OurTeam />
+      <Metrics />
       <Footer />
     </main>
   )
