@@ -9,6 +9,7 @@ import {
   DownloadSection,
   OurTeam,
   Metrics,
+  Testimonials,
   Footer
 } from './../components'
 
@@ -23,6 +24,7 @@ function Home() {
       <DownloadSection />
       <OurTeam />
       <Metrics />
+      <Testimonials />
       <Footer />
     </main>
   )

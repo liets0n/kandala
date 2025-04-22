@@ -1,0 +1,112 @@
+@use './../../styles/palette' as *;
+
+.container {
+  margin-top: 10.375rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .container__title {
+    width: max-content;
+    font-size: 1.625rem;
+    color: $primary;
+    font-family: var(--font-signatie);
+  }
+
+  .container__subtitle {
+    max-width: 35.75rem;
+    font-size: 3.5rem;
+    font-family: var(--font-miollan);
+    text-align: center;
+  }
+
+  .content {
+    position: relative;
+    width: 71.5rem;
+    height: 28.313rem;
+    background-color: $pink-50;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.125rem;
+    gap: 1.5rem;
+
+    .content__context {
+      width: 100%;
+      padding: 1rem;
+      padding-left: 3.25rem;
+
+      .context__testimonialsIndicator {
+        color: $primary;
+        text-align: end;
+      }
+
+      .context__quotes {
+        color: $primary;
+        transform: rotate(180deg);
+        margin-bottom: 1.5rem;
+      }
+
+      .context__testimony {
+        max-width: 33.75rem;
+        line-height: 2rem;
+      }
+
+      .context__bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8.375rem;
+
+        .bottom__personInfo {
+          font-size: 1.25rem;
+          font-family: var(--font-miollan);
+        }
+
+        .bottom__reviews {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1rem;
+          gap: 0.5rem;
+
+          .reviews__icon {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .content__reviewer {
+      width: 28.313rem;
+      height: 100%;
+    }
+
+    .content__btn {
+      position: absolute;
+      bottom: -1.75rem;
+      left: 50%;
+      width: 3.438rem;
+      height: 3.438rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary;
+      border: none;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: filter 1s;
+
+      .btn__icon {
+        color: $white;
+      }
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+  }
+}
