@@ -1,0 +1,167 @@
+@use './../../styles/palette' as *;
+
+.container {
+  width: 76.563rem;
+  display: flex;
+  gap: 3rem;
+  margin: 10.375rem auto;
+}
+
+.container__info {
+  width: 27.813rem;
+  height: max-content;
+  padding: 2rem;
+  background-color: $pink-50;
+  border-radius: 8px;
+
+  .info__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .info__office {
+    margin-top: 2rem;
+
+    .office__title {
+      font-weight: 500;
+      font-size: 1.125rem;
+    }
+
+    .office__context {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+
+      .context__address {
+        color: $gray-100;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .info__email {
+    margin-top: 3rem;
+
+    .email__title {
+      font-weight: 500;
+      font-size: 1.125rem;
+    }
+
+    .email__context {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+
+      .email__text,
+      .email__address {
+        color: $gray-100;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .info__contact {
+    margin-top: 3rem;
+
+    .contact__title {
+      font-weight: 500;
+      font-size: 1.125rem;
+    }
+
+    .contact__context {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+
+      .context__text,
+      .context__phone {
+        color: $gray-100;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .info__socialMedia {
+    margin-top: 3rem;
+
+    .socialMedia__title {
+      font-weight: 500;
+      font-size: 1.125rem;
+    }
+
+    .socialMedia__context {
+      display: flex;
+      align-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .socialMedia__link {
+        .link__icon {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.container__form {
+  width: 45rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .form__name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .wrapper__label { }
+
+    .wrapper__input {
+      width: 22rem;
+    }
+  }
+
+  .form__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+
+    .wrapper__label {
+      font-family: 500;
+      width: max-content;
+    }
+
+    .wrapper__input {
+      height: 3.563rem;
+      border: 1px solid $gray-100;
+      border-radius: 8px;
+      padding: 1rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  textarea {
+    height: 14.25rem;
+    resize: none;
+  }
+
+  .form__btn {
+    height: 4rem;
+    width: 100%;
+    color: $white;
+    background-color: $primary;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
