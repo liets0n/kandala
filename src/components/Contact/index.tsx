@@ -121,7 +121,7 @@ function Contact() {
             type='email'
             name='email'
             id='email'
-            placeholder='johndoe@example.com'
+            placeholder='john.doe@example.com'
             className={styles['wrapper__input']}
           />
         </div>
@@ -142,14 +142,14 @@ function Contact() {
 
         <div className={styles['form__wrapper']}>
           <label htmlFor='message' className={styles['wrapper__label']}>
-            Menssagem
+            Mensagem
           </label>
 
           <textarea
             name='message'
             id='message'
-            placeholder='Mensagem'
-            className={styles['wrapper__input']}
+            placeholder='Texto'
+            className={`${styles['wrapper__input']} ${styles['wrapper__input--textarea']}`}
           />
         </div>
 

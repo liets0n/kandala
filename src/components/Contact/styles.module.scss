@@ -34,7 +34,7 @@
       margin-top: 1rem;
 
       .context__address {
-        color: $gray-100;
+        color: $gray-200;
         font-size: 0.875rem;
       }
     }
@@ -56,7 +56,7 @@
 
       .email__text,
       .email__address {
-        color: $gray-100;
+        color: $gray-200;
         font-size: 0.875rem;
       }
     }
@@ -78,7 +78,7 @@
 
       .context__text,
       .context__phone {
-        color: $gray-100;
+        color: $gray-200;
         font-size: 0.875rem;
       }
     }
@@ -130,7 +130,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 1rem;
+    gap: 0.5rem;
 
     .wrapper__label {
       font-family: 500;
@@ -144,10 +144,13 @@
       padding: 1rem;
       font-size: 0.875rem;
     }
+
+    .wrapper__input--textarea {
+      height: 10.9rem;
+    }
   }
 
   textarea {
-    height: 14.25rem;
     resize: none;
   }
 
