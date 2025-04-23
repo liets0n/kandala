@@ -1,6 +1,6 @@
 {
   "name": "kandala",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
+    "clsx": "^2.1.1",
     "next": "15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
