@@ -1,5 +1,11 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
+import { z } from 'zod'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { enqueueSnackbar } from 'notistack'
 
 import {
   LinkedinLogo,
@@ -10,7 +16,56 @@ import {
 
 import styles from './styles.module.scss'
 
+const schemaValidation = z.object({
+  name: z
+    .string()
+    .min(1, { message: 'Campo obrigatório' })
+    .min(2, { message: 'Este campo precisa de no mínimo 2 caracteres' })
+    .max(255, { message: 'Este campo suporta apenas 255 caracteres' }),
+  surname: z
+    .string()
+    .min(1, { message: 'Campo obrigatório' })
+    .min(2, { message: 'Este campo precisa de no mínimo 2 caracteres' })
+    .max(255, { message: 'Este campo suporta apenas 255 caracteres' }),
+  email: z
+    .string()
+    .min(1, { message: 'Campo obrigatório' })
+    .email({ message: 'Endereço de E-mail inválido' }),
+  subject: z
+    .string()
+    .min(1, { message: 'Campo obrigatório' })
+    .min(2, { message: 'Este campo precisa de no mínimo 2 caracteres' })
+    .max(255, { message: 'Este campo suporta apenas 255 caracteres' }),
+  message: z
+    .string()
+    .min(1, { message: 'Campo obrigatório' })
+    .min(2, { message: 'Este campo precisa de no mínimo 2 caracteres' })
+    .max(500, { message: 'Este campo suporta apenas 500 caracteres' })
+})
+
+type SchemaType = z.infer<typeof schemaValidation>
+
 function Contact() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm<SchemaType>({
+    resolver: zodResolver(schemaValidation)
+  })
+
+  const handleSubmitFormData = (data: SchemaType) => {
+    try {
+      reset()
+      enqueueSnackbar('Formulário enviado com sucesso', { variant: 'success' })
+      console.log(data)
+    } catch {
+      enqueueSnackbar('Erro ao enviar o formulário', { variant: 'error' })
+      throw new Error('Erro a enviar o formulário')
+    }
+  }
+
   return (
     <section id='contact' className={styles['container']}>
       <div className={styles['container__info']}>
@@ -81,7 +136,10 @@ function Contact() {
         </div>
       </div>
 
-      <form className={styles['container__form']}>
+      <form
+        onSubmit={handleSubmit(handleSubmitFormData)}
+        className={styles['container__form']}
+      >
         <div className={styles['form__name']}>
           <div className={styles['form__wrapper']}>
             <label htmlFor='name' className={styles['wrapper__label']}>
@@ -90,11 +148,15 @@ function Contact() {
 
             <input
               type='text'
-              name='name'
               id='name'
               placeholder='John'
               className={styles['wrapper__input']}
+              {...register('name')}
             />
+
+            {errors.name?.message && (
+              <p className={styles['wrapper__error']}>{errors.name?.message}</p>
+            )}
           </div>
 
           <div className={styles['form__wrapper']}>
@@ -104,11 +166,17 @@ function Contact() {
 
             <input
               type='text'
-              name='surname'
               id='surname'
               placeholder='Doe'
               className={styles['wrapper__input']}
+              {...register('surname')}
             />
+
+            {errors.surname?.message && (
+              <p className={styles['wrapper__error']}>
+                {errors.surname?.message}
+              </p>
+            )}
           </div>
         </div>
 
@@ -119,11 +187,15 @@ function Contact() {
 
           <input
             type='email'
-            name='email'
             id='email'
             placeholder='john.doe@example.com'
             className={styles['wrapper__input']}
+            {...register('email')}
           />
+
+          {errors.email?.message && (
+            <p className={styles['wrapper__error']}>{errors.email?.message}</p>
+          )}
         </div>
 
         <div className={styles['form__wrapper']}>
@@ -133,11 +205,17 @@ function Contact() {
 
           <input
             type='text'
-            name='subject'
             id='subject'
             placeholder='Exemplo'
             className={styles['wrapper__input']}
+            {...register('subject')}
           />
+
+          {errors.subject?.message && (
+            <p className={styles['wrapper__error']}>
+              {errors.subject?.message}
+            </p>
+          )}
         </div>
 
         <div className={styles['form__wrapper']}>
@@ -146,11 +224,17 @@ function Contact() {
           </label>
 
           <textarea
-            name='message'
             id='message'
             placeholder='Texto'
             className={`${styles['wrapper__input']} ${styles['wrapper__input--textarea']}`}
+            {...register('message')}
           />
+
+          {errors.message?.message && (
+            <p className={styles['wrapper__error']}>
+              {errors.message?.message}
+            </p>
+          )}
         </div>
 
         <button type='submit' className={styles['form__btn']}>

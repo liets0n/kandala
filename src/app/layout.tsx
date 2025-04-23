@@ -2,6 +2,7 @@ import React from 'react'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { Poppins } from 'next/font/google'
+import Providers from './providers'
 
 import { Header } from './../layout'
 
@@ -47,6 +48,7 @@ export default function RootLayout({
     >
       <body>
         <Header />
+        <Providers />
         {children}
       </body>
     </html>

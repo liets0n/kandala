@@ -116,7 +116,7 @@
 
   .form__name {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
 
     .wrapper__label { }
@@ -143,6 +143,11 @@
       border-radius: 8px;
       padding: 1rem;
       font-size: 0.875rem;
+    }
+
+    .wrapper__error {
+      font-size: 14px;
+      color: $primary;
     }
 
     .wrapper__input--textarea {
