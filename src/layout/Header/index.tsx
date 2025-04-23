@@ -1,8 +1,10 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
+import clsx from 'clsx'
 
 import { ArrowUpRight, List } from '@phosphor-icons/react/dist/ssr'
 
@@ -12,6 +14,9 @@ import Logo from './../../assets/images/logo/full_logo_black.svg'
 
 function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  const pathname = usePathname()
+  const isUseInLegalPages = pathname.includes('legal')
 
   useEffect(() => {
     if (isSidebarOpen) {
@@ -79,7 +84,10 @@ function Header() {
         </ul>
 
         <div className={styles['container__rightSide']}>
-          <Link href='/#contact' className={styles['rightSide__link']}>
+          <Link
+            href='/#contact'
+            className={`${styles['rightSide__link']} ${styles[clsx({ 'rightSide__link--bgGray': isUseInLegalPages })]}`}
+          >
             <p className={styles['link__text']}>Contactos</p>
 
             <span className={styles['link__iconContainer']}>
