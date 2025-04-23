@@ -30,7 +30,7 @@ const data = [
   }
 ]
 
-function Faqs() {
+function Faq() {
   const [isAccordionOpen, setIsAccordionOpen] = useState(-1)
 
   const handleIsAccordionOpenState = (item: number) => {
@@ -42,7 +42,7 @@ function Faqs() {
   }
 
   return (
-    <section id='Faqs' className={styles['container']}>
+    <section id='faq' className={styles['container']}>
       <h1 className={styles['container__title']}>
         Tudo o que você precisa saber antes de começar.
       </h1>
@@ -81,4 +81,4 @@ function Faqs() {
   )
 }
 
-export default Faqs
+export default Faq

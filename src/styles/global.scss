@@ -19,6 +19,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $black;
   background-color: $white;
+  scroll-behavior: smooth;
 }
 
 body,

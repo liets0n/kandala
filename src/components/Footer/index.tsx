@@ -62,7 +62,7 @@ function Footer() {
             </li>
 
             <li className={styles['list__item']}>
-              <Link href='/#faqs' className={styles['item__link']}>
+              <Link href='/#faq' className={styles['item__link']}>
                 <p className={styles['link__text']}>FAQ&apos;s</p>
               </Link>
             </li>

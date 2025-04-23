@@ -9,7 +9,7 @@ import Reviewer from './../../assets/images/outTeam/person_3.png'
 
 function Testimonials() {
   return (
-    <section className={styles['container']}>
+    <section id='testimonials' className={styles['container']}>
       <h1 className={styles['container__title']}>
         Histórias reais, beleza transformada.
       </h1>
