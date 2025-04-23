@@ -23,6 +23,9 @@ export default defineConfig([
   importPlugin.flatConfigs.recommended,
   eslintPluginUnicorn.configs.recommended,
   {
+    ignores: ['**/*.scss', '**/*.sass', 'dist', 'node_modules']
+  },
+  {
     plugins: {
       '@next/next': pluginNext
     }
