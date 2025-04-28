@@ -10,13 +10,13 @@
   background-image: url('./../../assets/images/gradient.svg');
   overflow: hidden;
 
-  // @media (width <= 744px) {
-  //   margin-top: 5.125rem;
-  // }
+  @media (width <= 716px) {
+    padding-top: 5rem;
+  }
 
-  // @media (width <= 390px) {
-  //   margin-top: 3.875rem;
-  // }
+  @media (width <= 500px) {
+    padding-top: 3.875rem;
+  }
 }
 
 .content {

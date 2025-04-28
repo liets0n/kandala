@@ -1,6 +1,9 @@
-import React from 'react'
+'use client'
+
+import React, { useLayoutEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { gsap } from 'gsap'
 
 import styles from './styles.module.scss'
 import Pictore_1 from './../../assets/images/heroSection/pictor_1.png'
@@ -14,6 +17,19 @@ import GooglePay from './../../assets/images/googleplay.svg'
 import Mobile_Mockup from './../../assets/images/heroSection/mobile_phone_mockup.png'
 
 function HeroSection() {
+  useLayoutEffect(() => {
+    gsap.to('.pictors', {
+      rotate: '-25deg',
+      duration: 1,
+      repeat: -1,
+      yoyo: true
+    })
+
+    return () => {
+      gsap.killTweensOf('.pictors')
+    }
+  }, [])
+
   return (
     <section id='home' className={styles['container']}>
       <div className={styles['content']}>
@@ -38,19 +54,19 @@ function HeroSection() {
             <Image
               src={Pictore_1}
               alt='Pictore 1'
-              className={styles['left__pictor']}
+              className={`${styles['left__pictor']} pictors`}
             />
 
             <Image
               src={Pictore_2}
               alt='Pictore 2'
-              className={styles['left__pictor']}
+              className={`${styles['left__pictor']} pictors`}
             />
 
             <Image
               src={Pictore_3}
               alt='Pictore 3'
-              className={styles['left__pictor']}
+              className={`${styles['left__pictor']} pictors`}
             />
           </div>
 
@@ -76,19 +92,19 @@ function HeroSection() {
             <Image
               src={Pictore_4}
               alt='Pictore 4'
-              className={styles['right__pictor']}
+              className={`${styles['right__pictor']} pictors`}
             />
 
             <Image
               src={Pictore_5}
               alt='Pictore 5'
-              className={styles['right__pictor']}
+              className={`${styles['right__pictor']} pictors`}
             />
 
             <Image
               src={Pictore_6}
               alt='Pictore 6'
-              className={styles['right__pictor']}
+              className={`${styles['right__pictor']} pictors`}
             />
           </div>
         </div>

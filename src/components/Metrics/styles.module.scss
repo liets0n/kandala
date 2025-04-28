@@ -12,7 +12,14 @@
     padding: 2rem;
 
     .container__item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
       .container__number {
+        width: max-content;
+        display: flex;
         font-size: 9rem;
         font-family: var(--font-miollan);
         color: $primary;
@@ -54,7 +61,7 @@
     .container__list {
       .container__item {
         width: 100%;
-        text-align: center;
+        align-items: center;
       }
     }
   }
