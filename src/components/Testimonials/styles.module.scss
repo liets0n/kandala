@@ -123,6 +123,8 @@
       border-radius: 100%;
       cursor: pointer;
       transition: filter 1s;
+      border: 2px solid $white;
+      outline: 2px solid $primary;
 
       .btn__icon {
         color: $white;
@@ -157,6 +159,11 @@
 
       .content__reviewer {
         display: none;
+      }
+
+      .content__btn {
+        border: none;
+        outline: none;
       }
     }
   }
