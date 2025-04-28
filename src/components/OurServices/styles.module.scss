@@ -11,7 +11,7 @@
   }
 
   .container__subtitle {
-    width: 37.438rem;
+    max-width: 37.438rem;
     font-size: 3.5rem;
     font-family: var(--font-miollan);
     margin-top: 1rem;
@@ -22,9 +22,11 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    overflow: hidden;
 
     .cards__item {
-      width: 24.313rem;
+      min-width: 24.313rem;
+      max-width: 28rem;
       height: 27.375rem;
       background-color: $gray-50;
       border-radius: 8px;
@@ -33,6 +35,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      overflow: hidden;
 
       .item__icon {
         color: $gray-200;
@@ -73,5 +76,18 @@
 
       .item__icon { }
     }
+  }
+
+  @media (width <= 683px) {
+    margin-top: 3.875rem;
+
+    .container__subtitle {
+      font-size: 2rem;
+      max-width: 25rem;
+    }
+  }
+
+  @media (width <= 469px) {
+    padding: 0 1rem;
   }
 }

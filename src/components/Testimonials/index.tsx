@@ -20,13 +20,20 @@ function Testimonials() {
 
       <div className={styles['content']}>
         <div className={styles['content__context']}>
-          <p className={styles['context__testimonialsIndicator']}>1 de 4</p>
+          <div className={styles['context__top']}>
+            <Quotes size={32} weight='thin' className={styles['top__quotes']} />
 
-          <Quotes
-            size={32}
-            weight='thin'
-            className={styles['context__quotes']}
-          />
+            <p className={styles['top__testimonialsIndicator']}>1 de 4</p>
+
+            <p className={styles['top__reviews']}>
+              <Star
+                size={20}
+                weight='fill'
+                className={styles['reviews__icon']}
+              />
+              4.9
+            </p>
+          </div>
 
           <div className={styles['context__testimony']}>
             &quot;Eu nunca imaginei que encontrar a maquiadora perfeita seria
@@ -36,7 +43,15 @@ function Testimonials() {
           </div>
 
           <div className={styles['context__bottom']}>
-            <p className={styles['bottom__personInfo']}>— Carla S., 28 anos</p>
+            <div className={styles['bottom__personInfo']}>
+              <Image
+                src={Reviewer}
+                alt='Testemunhante'
+                className={styles['personInfo__avatar']}
+              />
+
+              <p className={styles['personInfo__info']}>— Carla S., 28 anos</p>
+            </div>
 
             <p className={styles['bottom__reviews']}>
               <Star

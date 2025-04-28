@@ -23,30 +23,42 @@
 
   .content {
     position: relative;
-    width: 71.5rem;
+    width: 100%;
+    max-width: 71.5rem;
     height: 28.313rem;
     background-color: $pink-50;
     border-radius: 2rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-top: 4.125rem;
     gap: 1.5rem;
 
     .content__context {
       width: 100%;
-      padding: 1rem;
-      padding-left: 3.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 2rem;
+      padding: 1rem 1rem 3rem 3.25rem;
 
-      .context__testimonialsIndicator {
-        color: $primary;
-        text-align: end;
-      }
+      .context__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-      .context__quotes {
-        color: $primary;
-        transform: rotate(180deg);
-        margin-bottom: 1.5rem;
+        .top__quotes {
+          color: $primary;
+          transform: rotate(180deg);
+        }
+
+        .top__testimonialsIndicator {
+          color: $primary;
+          text-align: end;
+        }
+
+        .top__reviews {
+          display: none;
+        }
       }
 
       .context__testimony {
@@ -59,23 +71,34 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 8.375rem;
 
         .bottom__personInfo {
-          font-size: 1.25rem;
-          font-family: var(--font-miollan);
-        }
-
-        .bottom__reviews {
           display: flex;
           align-items: center;
           justify-content: center;
-          line-height: 1rem;
-          gap: 0.5rem;
+          gap: 1rem;
 
-          .reviews__icon {
-            color: $primary;
+          .personInfo__avatar {
+            display: none;
           }
+
+          .personInfo__info {
+            font-size: 1.25rem;
+            font-family: var(--font-miollan);
+          }
+        }
+      }
+
+      .top__reviews,
+      .bottom__reviews {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1rem;
+        gap: 0.5rem;
+
+        .reviews__icon {
+          color: $primary;
         }
       }
     }
@@ -87,8 +110,9 @@
 
     .content__btn {
       position: absolute;
-      bottom: -1.75rem;
+      bottom: -1.6rem;
       left: 50%;
+      transform: translateX(-50%);
       width: 3.438rem;
       height: 3.438rem;
       display: flex;
@@ -106,6 +130,69 @@
 
       &:hover {
         filter: brightness(0.9);
+      }
+    }
+  }
+
+  @media(width <= 1173px) {
+    margin-top: 5.125rem;
+
+    .content {
+      .content__context {
+        padding: 1rem 3.25rem 3rem 3.25rem;
+
+        .context__bottom {
+          .bottom__personInfo {
+            .personInfo__avatar {
+              display: block;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 10rem;
+              border: 2px solid $pink-50;
+              outline: 1px solid $primary;
+            }
+          }
+        }
+      }
+
+      .content__reviewer {
+        display: none;
+      }
+    }
+  }
+
+  @media (width <= 500px) {
+    padding: 0 1.5rem;
+    margin-top: 3.875rem;
+
+    .container__title {
+      width: 100%;
+      text-align: center;
+    }
+
+    .container__subtitle {
+      max-width: 25rem;
+      text-align: center;
+      font-size: 2.188rem;
+    }
+
+    .content {
+      height: max-content;
+
+      .content__context {
+        padding: 1.5rem 1.5rem 3rem 1.5rem;
+
+        .context__top {
+          .top__reviews {
+            display: flex;
+          }
+        }
+
+        .context__bottom {
+          .bottom__reviews {
+            display: none;
+          }
+        }
       }
     }
   }

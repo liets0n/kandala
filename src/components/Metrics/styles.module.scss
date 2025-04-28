@@ -9,6 +9,7 @@
     justify-content: center;
     gap: 5.75rem;
     list-style: none;
+    padding: 2rem;
 
     .container__item {
       .container__number {
@@ -26,5 +27,39 @@
 
       .container__subtitle { }
     }
+  }
+
+  @media (width <= 1077px) {
+    .container__list {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  @media (width <= 744px) {
+    margin-top: 5.125rem;
+
+    .container__list {
+      gap: 3rem;
+
+      .container__item {
+        .container__number {
+          font-size: 6rem;
+        }
+      }
+    }
+  }
+
+  @media (width <= 517px) {
+    .container__list {
+      .container__item {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (width <= 390px) {
+    margin-top: 3.875rem;
   }
 }
