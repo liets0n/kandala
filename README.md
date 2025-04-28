@@ -30,29 +30,31 @@ Somos mais do que uma aplicação de beleza — somos a sua parceira para realç
 - clx
 - Notistack
 - Phosphor Icons
+- Gsap
 
 ## Como Executar
 
-Para executar o projecto siga as seguintes etapas:
+Para executar o projeto siga as seguintes etapas:
 
 1. Clona o repositório na sua maquina.
-2. Execute `pnpm i` no diretório do projecto para instalar as dependências.
-3. Execute `pnpm run dev` para iniciar o projecto.
+2. Execute `pnpm i` no diretório do projeto para instalar as dependências.
+3. Execute `pnpm run dev` para iniciar o projeto.
 4. Abra `http://localhost:3000` (ou o endereço apresentado no seu console) no seu browser.
 
-## Estrutura de pastas do projecto
+## Estrutura de pastas do projeto
 
 ```
 .
 ├── src
 |   ├── styles       # Contém todos os estilos globais da lading page.
-|   ├── layouts      # Contém todos os componentes que seram visíveis em todas as páginas ou na maioria.
+|   ├── mock         # Contém todos os mocks data.
+|   ├── layouts      # Contém todos os componentes que serão visíveis em todas as páginas ou na maioria.
 |   ├── components   # Contém todos os componentes da lading page. 
 |   ├── assets       # Contém todos os arquivos estáticos da lading page.
 |   |   ├── images   # Contém das as imagens usadas na lading page. 
-|   |   └── fonts    # Contém dodas as fontes externas usadas na lading page.
+|   |   └── fonts    # Contém todas as fontes externas usadas na lading page.
 |   └── app          # Contém toda regra de negócio da lading page.
 |
-├── public           # Contém todos os ficheiros estáticos que serão servidos diretamente pelo servidor web. (Vazia)
+├── public           # Contém todos os ficheiros estáticos que serão servidos diretamente pelo servidor web.
 └── .husky           # Contém os arquivos de configuração do husky.
 ```
