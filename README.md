@@ -11,7 +11,7 @@
   ![NPM](https://img.shields.io/badge/NPM-000000.svg?style=for-the-badge&logo=npm&logoColor=white)
   ![GitHub](https://img.shields.io/badge/github-black.svg?style=for-the-badge&logo=github&logoColor=white)
   ![Git](https://img.shields.io/badge/git-black.svg?style=for-the-badge&logo=git&logoColor=white)
-  [![Version](https://img.shields.io/badge/Version-0.18.0-green?style=for-the-badge&color=black)]()
+  [![Version](https://img.shields.io/badge/Version-1.0.0-green?style=for-the-badge&color=black)]()
 </div>
 
 <br />
