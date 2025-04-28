@@ -6,29 +6,7 @@ import clsx from 'clsx'
 import { CaretDown } from '@phosphor-icons/react/dist/ssr'
 
 import styles from './styles.module.scss'
-
-const data = [
-  {
-    question: '1. Como escolho o profissional ideal para mim?',
-    answers:
-      'Na nossa app, você pode navegar pelos perfis dos profissionais, ver fotos de trabalhos anteriores, avaliações de outras clientes e até filtrar por especialidades, como cabelo, maquiagem ou estética. É simples e intuitivo!'
-  },
-  {
-    question: '2. Posso agendar um serviço para o mesmo dia?',
-    answers:
-      'Na nossa app, você pode navegar pelos perfis dos profissionais, ver fotos de trabalhos anteriores, avaliações de outras clientes e até filtrar por especialidades, como cabelo, maquiagem ou estética. É simples e intuitivo!'
-  },
-  {
-    question: '3. Os serviços são realizados em casa ou no salão?',
-    answers:
-      'Na nossa app, você pode navegar pelos perfis dos profissionais, ver fotos de trabalhos anteriores, avaliações de outras clientes e até filtrar por especialidades, como cabelo, maquiagem ou estética. É simples e intuitivo!'
-  },
-  {
-    question: '4. E se eu precisar cancelar ou reagendar?',
-    answers:
-      'Na nossa app, você pode navegar pelos perfis dos profissionais, ver fotos de trabalhos anteriores, avaliações de outras clientes e até filtrar por especialidades, como cabelo, maquiagem ou estética. É simples e intuitivo!'
-  }
-]
+import MockResponse from './../../mock/faq.json'
 
 function Faq() {
   const [isAccordionOpen, setIsAccordionOpen] = useState(-1)
@@ -53,7 +31,7 @@ function Faq() {
 
       <div className={styles['container__accordion']}>
         <ul className={styles['accordion__list']}>
-          {data.map((item, index) => (
+          {MockResponse.data.map((item, index) => (
             <li className={styles['list__item']} key={index}>
               <button
                 className={styles['item__btn']}

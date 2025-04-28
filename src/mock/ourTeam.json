@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "topics": ["10-13 anos", "Trancista"],
+      "name": "Josilda Estevão",
+      "description": "Monte sua rotina de beleza com serviços sob medida, desde maquiagem até cuidados...",
+      "stars": "4.9",
+      "countReviews": "120+",
+      "pictor": "/assets/images/ourTeam/person_1.png"
+    },
+    {
+      "topics": ["12-15 anos", "Trancista"],
+      "name": "Andrea Balestrin",
+      "description": "Monte sua rotina de beleza com serviços sob medida, desde maquiagem até cuidados...",
+      "stars": "5",
+      "countReviews": "500",
+      "pictor": "/assets/images/ourTeam/person_2.png"
+    },
+    {
+      "topics": ["2-3 anos", "Trancista"],
+      "name": "Paula Bernadeth",
+      "description": "Monte sua rotina de beleza com serviços sob medida, desde maquiagem até cuidados...",
+      "stars": "2.3",
+      "countReviews": "12",
+      "pictor": "/assets/images/ourTeam/person_3.png"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 
 import styles from './styles.module.scss'
+import MockResponse from './../../mock/ourServices.json'
 
 function OurServices() {
   return (
@@ -18,44 +19,16 @@ function OurServices() {
       </h2>
 
       <ul className={styles['container__cards']}>
-        <li className={styles['cards__item']}>
-          <Medal size={53} className={styles['item__icon']} />
+        {MockResponse.data.map((item, index) => (
+          <li className={styles['cards__item']} key={index}>
+            <Medal size={53} className={styles['item__icon']} />
 
-          <div className={styles['item__texts']}>
-            <p className={styles['texts__title']}>Maquiagem Personalizada</p>
-
-            <p className={styles['texts__description']}>
-              Monte sua rotina de beleza com serviços sob medida, desde
-              maquiagem até cuidados com a pele, tudo pensado para você.
-            </p>
-          </div>
-        </li>
-
-        <li className={styles['cards__item']}>
-          <Medal size={53} className={styles['item__icon']} />
-
-          <div className={styles['item__texts']}>
-            <p className={styles['texts__title']}>Corte e Coloração</p>
-
-            <p className={styles['texts__description']}>
-              Monte sua rotina de beleza com serviços sob medida, desde
-              maquiagem até cuidados com a pele, tudo pensado para você.
-            </p>
-          </div>
-        </li>
-
-        <li className={styles['cards__item']}>
-          <Medal size={53} className={styles['item__icon']} />
-
-          <div className={styles['item__texts']}>
-            <p className={styles['texts__title']}>Manicure e Pedicure</p>
-
-            <p className={styles['texts__description']}>
-              Monte sua rotina de beleza com serviços sob medida, desde
-              maquiagem até cuidados com a pele, tudo pensado para você.
-            </p>
-          </div>
-        </li>
+            <div className={styles['item__texts']}>
+              <p className={styles['texts__title']}>{item.title}</p>
+              <p className={styles['texts__description']}>{item.description}</p>
+            </div>
+          </li>
+        ))}
       </ul>
 
       <div className={styles['container__buttons']}>

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "stars": "4.9",
+      "testimony":
+        "Eu nunca imaginei que encontrar a maquiadora perfeita seria tão fácil! Com a app, agendei uma make incrível para o meu evento e me senti uma verdadeira estrela. A profissional foi atenciosa e acertou exatamente o que eu queria. Super recomendo!",
+      "pictor": "/assets/images/ourTeam/person_3.png",
+      "name": "Carla S.",
+      "age": "28"
+    },
+    {
+      "stars": "4",
+      "testimony":
+        "Eu nunca imaginei que encontrar a maquiadora perfeita seria tão fácil! Com a app, agendei uma make incrível para o meu evento e me senti uma verdadeira estrela. A profissional foi atenciosa e acertou exatamente o que eu queria. Super recomendo!",
+      "pictor": "/assets/images/ourTeam/person_2.png",
+      "name": "Paula D.",
+      "age": "30"
+    },
+    {
+      "stars": "5",
+      "testimony":
+        "Eu nunca imaginei que encontrar a maquiadora perfeita seria tão fácil! Com a app, agendei uma make incrível para o meu evento e me senti uma verdadeira estrela. A profissional foi atenciosa e acertou exatamente o que eu queria. Super recomendo!",
+      "pictor": "/assets/images/ourTeam/person_1.png",
+      "name": "Andreia R.",
+      "age": "33"
+    }
+  ]
+}
