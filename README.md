@@ -36,8 +36,8 @@ Somos mais do que uma aplicação de beleza — somos a sua parceira para realç
 Para executar o projecto siga as seguintes etapas:
 
 1. Clona o repositório na sua maquina.
-2. Execute `npm i` no diretório do projecto para instalar as dependências.
-3. Execute `npm run dev` para iniciar o projecto.
+2. Execute `pnpm i` no diretório do projecto para instalar as dependências.
+3. Execute `pnpm run dev` para iniciar o projecto.
 4. Abra `http://localhost:3000` (ou o endereço apresentado no seu console) no seu browser.
 
 ## Estrutura de pastas do projecto
