@@ -44,10 +44,12 @@
     align-items: center;
     gap: 1rem;
     margin-top: 3.875rem;
+    overflow: hidden;
 
     .cards__item {
       position: relative;
-      width: 24.313rem;
+      min-width: 24.313rem;
+      max-width: 24.313rem;
       height: 43.25rem;
       list-style: none;
       border-radius: 2rem;

@@ -12,12 +12,38 @@ import {
 
 import styles from './styles.module.scss'
 
-import Image_1 from './../../assets/images/howItWorks/image_1.png'
-import Image_2 from './../../assets/images/howItWorks/image_2.png'
-import Image_3 from './../../assets/images/howItWorks/image_3.png'
-import Image_4 from './../../assets/images/howItWorks/image_4.png'
-
 gsap.registerPlugin(ScrollTrigger)
+
+const data = [
+  {
+    number: '1',
+    title: 'Crie sua Conta',
+    description:
+      'Monte sua rotina de beleza com serviços sob medida, desde maquiagem até cuidados com a pele, tudo pensado para você.',
+    pictor: '/assets/images/howItWorks/image_1.png'
+  },
+  {
+    number: '2',
+    title: 'Escolha o Serviço',
+    description:
+      'Monte sua rotina de beleza com serviços sob medida, desde maquiagem até cuidados com a pele, tudo pensado para você.',
+    pictor: '/assets/images/howItWorks/image_2.png'
+  },
+  {
+    number: '3',
+    title: 'Encontre Profissionais',
+    description:
+      'Monte sua rotina de beleza com serviços sob medida, desde maquiagem até cuidados com a pele, tudo pensado para você.',
+    pictor: '/assets/images/howItWorks/image_3.png'
+  },
+  {
+    number: '4',
+    title: 'Agende com Facilidade',
+    description:
+      'Monte sua rotina de beleza com serviços sob medida, desde maquiagem até cuidados com a pele, tudo pensado para você.',
+    pictor: '/assets/images/howItWorks/image_4.png'
+  }
+]
 
 function HowItWorks() {
   const sectionReference = useRef(null)
@@ -31,7 +57,7 @@ function HowItWorks() {
         sectionReference.current,
         { translateX: 0 },
         {
-          translateX: '-232vw',
+          translateX: '-303vw',
           ease: 'none',
           duration: 1,
           scrollTrigger: {
@@ -84,97 +110,31 @@ function HowItWorks() {
         </div>
 
         <ul className={styles['container__cards']} ref={sectionReference}>
-          <li className={styles['cards__item']}>
-            <div className={styles['item__content']}>
-              <div className={styles['content__wrapper']}>
-                <p className={styles['wrapper__number']}>1</p>
+          {data.map((item, index) => (
+            <li className={styles['cards__item']} key={index}>
+              <div className={styles['item__content']}>
+                <div className={styles['content__wrapper']}>
+                  <p className={styles['wrapper__number']}>{item.number}</p>
 
-                <div className={styles['wrapper__texts']}>
-                  <p className={styles['texts__title']}>Crie sua Conta</p>
+                  <div className={styles['wrapper__texts']}>
+                    <p className={styles['texts__title']}>{item.title}</p>
 
-                  <p className={styles['texts__description']}>
-                    Monte sua rotina de beleza com serviços sob medida, desde
-                    maquiagem até cuidados com a pele, tudo pensado para você.
-                  </p>
+                    <p className={styles['texts__description']}>
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <Image
-              src={Image_1}
-              alt='Image 1'
-              className={styles['item__image']}
-            />
-          </li>
-
-          <li className={styles['cards__item']}>
-            <div className={styles['item__content']}>
-              <div className={styles['content__wrapper']}>
-                <p className={styles['wrapper__number']}>2</p>
-
-                <div className={styles['wrapper__texts']}>
-                  <p className={styles['texts__title']}>Crie sua Conta</p>
-
-                  <p className={styles['texts__description']}>
-                    Monte sua rotina de beleza com serviços sob medida, desde
-                    maquiagem até cuidados com a pele, tudo pensado para você.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Image
-              src={Image_2}
-              alt='Image 2'
-              className={styles['item__image']}
-            />
-          </li>
-
-          <li className={styles['cards__item']}>
-            <div className={styles['item__content']}>
-              <div className={styles['content__wrapper']}>
-                <p className={styles['wrapper__number']}>3</p>
-
-                <div className={styles['wrapper__texts']}>
-                  <p className={styles['texts__title']}>Crie sua Conta</p>
-
-                  <p className={styles['texts__description']}>
-                    Monte sua rotina de beleza com serviços sob medida, desde
-                    maquiagem até cuidados com a pele, tudo pensado para você.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Image
-              src={Image_3}
-              alt='Image 3'
-              className={styles['item__image']}
-            />
-          </li>
-
-          <li className={styles['cards__item']}>
-            <div className={styles['item__content']}>
-              <div className={styles['content__wrapper']}>
-                <p className={styles['wrapper__number']}>4</p>
-
-                <div className={styles['wrapper__texts']}>
-                  <p className={styles['texts__title']}>Crie sua Conta</p>
-
-                  <p className={styles['texts__description']}>
-                    Monte sua rotina de beleza com serviços sob medida, desde
-                    maquiagem até cuidados com a pele, tudo pensado para você.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Image
-              src={Image_4}
-              alt='Image 4'
-              className={styles['item__image']}
-            />
-          </li>
+              <Image
+                src={item.pictor}
+                width='548'
+                height='432'
+                alt=''
+                className={styles['item__image']}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </section>

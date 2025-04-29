@@ -36,7 +36,7 @@
   }
 
   .container__cards {
-    width: 100%;
+    min-width: 400vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +44,7 @@
     margin-top: 5rem;
 
     .cards__item {
-      width: 100rem;
+      min-width: 100vw;
       display: flex;
       align-items: center;
       gap: 2rem;

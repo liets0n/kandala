@@ -3,6 +3,7 @@
 .container {
   width: 100%;
   max-width: 76.563rem;
+  height: max-content;
   display: flex;
   gap: 3rem;
   padding: 0 1rem;
@@ -16,7 +17,7 @@
 .container__info {
   width: 100%;
   max-width: 27.813rem;
-  height: max-content;
+  min-height: 100%;
   padding: 2rem;
   background-color: $pink-50;
   border-radius: 8px;

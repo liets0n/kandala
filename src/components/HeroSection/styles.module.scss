@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 5rem;
-  background-image: url('./../../assets/images/gradient.svg');
+  background: $white url('./../../assets/images/gradient.svg') no-repeat center center / cover;
   overflow: hidden;
 
   @media (width <= 716px) {
@@ -64,9 +64,8 @@
     width: 100%;
     height: auto;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 5rem;
+    gap: 2rem;
 
     .album__left,
     .album__middle,
@@ -76,7 +75,6 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      gap: 2rem;
     }
 
     .album__left,
@@ -88,7 +86,7 @@
     }
 
     .album__middle {
-      width: 100%;
+      gap: 2rem;
 
       .middle__downloadButtons {
         width: 100%;

@@ -12,17 +12,19 @@
     color: $gray-200;
     margin: 0 auto;
     margin-top: 5.625rem;
+    margin-bottom: -20vh;
     font-weight: 100;
   }
 
   .container__kandala {
-    height: max-content;
-    font-size: 23.063rem;
     font-family: var(--font-miollan);
-    letter-spacing: 2.7rem;
     color: $primary;
-    margin-left: -3rem;
-    margin-bottom: -5.94rem;
+    display: block;
+    width: max-content;
+    font-size: 31.2vw;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translate(-3.3vw, 14.6vh);
   }
 
   @media (width <= 1046px) {
@@ -30,11 +32,6 @@
   }
 
   @media (width <= 744px) {
-    .container__kandala {
-      font-size: 9rem;
-      margin-bottom: -3rem;
-    }
-
     .container__copyRight {
       margin-top: 3.875rem;
       font-size: 0.875rem;
