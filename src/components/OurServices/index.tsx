@@ -1,4 +1,7 @@
-import React from 'react'
+'use client'
+
+import React, { useRef } from 'react'
+import { gsap } from 'gsap'
 
 import {
   Medal,
@@ -10,6 +13,23 @@ import styles from './styles.module.scss'
 import MockResponse from './../../mock/ourServices.json'
 
 function OurServices() {
+  const containerReference = useRef<HTMLUListElement | null>(null)
+  const scrollAmount = 800
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (containerReference.current) {
+      const currentScroll = containerReference.current.scrollLeft
+      gsap.to(containerReference.current, {
+        scrollLeft:
+          direction === 'right'
+            ? currentScroll + scrollAmount
+            : currentScroll - scrollAmount,
+        duration: 0.5,
+        ease: 'power2.out'
+      })
+    }
+  }
+
   return (
     <section id='ourservices' className={styles['container']}>
       <h1 className={styles['container__title']}>Nossos Serviços</h1>
@@ -18,7 +38,7 @@ function OurServices() {
         Transforme sua beleza com serviços feitos para você.
       </h2>
 
-      <ul className={styles['container__cards']}>
+      <ul className={styles['container__cards']} ref={containerReference}>
         {MockResponse.data.map((item, index) => (
           <li className={styles['cards__item']} key={index}>
             <Medal size={53} className={styles['item__icon']} />
@@ -37,6 +57,7 @@ function OurServices() {
             size={44}
             weight='thin'
             className={styles['item__icon']}
+            onClick={() => scroll('left')}
           />
         </button>
 
@@ -45,6 +66,7 @@ function OurServices() {
             size={44}
             weight='thin'
             className={styles['item__icon']}
+            onClick={() => scroll('right')}
           />
         </button>
       </div>
