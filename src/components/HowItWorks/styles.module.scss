@@ -42,6 +42,7 @@
     justify-content: space-between;
     gap: 2rem;
     margin-top: 5rem;
+    scroll-behavior: smooth;
 
     .cards__item {
       min-width: 100vw;
@@ -108,9 +109,14 @@
     }
 
     .container__cards {
-      gap: 4rem;
+      min-width: inherit;
+      gap: 0;
+      overflow-x: hidden;
+      justify-content: flex-start;
 
       .cards__item {
+        min-width: 90vw;
+
         .content__wrapper {
           max-width: 31.25rem;
         }

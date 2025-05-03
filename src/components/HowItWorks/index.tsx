@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -46,8 +46,28 @@ const data = [
 ]
 
 function HowItWorks() {
-  const sectionReference = useRef(null)
-  const triggerReference = useRef(null)
+  const sectionReference = useRef<HTMLUListElement | null>(null)
+  const triggerReference = useRef<HTMLDivElement | null>(null)
+
+  const scrollAmount = window.innerWidth * 0.9
+
+  const handleScroll = useCallback(
+    (direction: 'left' | 'right') => {
+      if (sectionReference.current) {
+        const currentScroll = sectionReference.current.scrollLeft
+
+        gsap.to(sectionReference.current, {
+          scrollLeft:
+            direction === 'right'
+              ? currentScroll + scrollAmount
+              : currentScroll - scrollAmount,
+          duration: 0.5,
+          ease: 'power2.out'
+        })
+      }
+    },
+    [scrollAmount]
+  )
 
   useLayoutEffect(() => {
     const mm = gsap.matchMedia()
@@ -91,7 +111,11 @@ function HowItWorks() {
           </h2>
 
           <div className={styles['container__buttons']}>
-            <button type='button' className={styles['buttons__item']}>
+            <button
+              type='button'
+              className={styles['buttons__item']}
+              onClick={() => handleScroll('left')}
+            >
               <ArrowCircleLeft
                 size={44}
                 weight='thin'
@@ -99,7 +123,11 @@ function HowItWorks() {
               />
             </button>
 
-            <button type='button' className={styles['buttons__item']}>
+            <button
+              type='button'
+              className={styles['buttons__item']}
+              onClick={() => handleScroll('right')}
+            >
               <ArrowCircleRight
                 size={44}
                 weight='thin'
