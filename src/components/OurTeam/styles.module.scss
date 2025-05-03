@@ -46,6 +46,7 @@
     gap: 1rem;
     margin-top: 3.875rem;
     overflow: hidden;
+    scroll-behavior: 'smooth';
 
     .cards__item {
       position: relative;

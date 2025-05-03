@@ -1,4 +1,7 @@
-import React from 'react'
+'use client'
+
+import React, { useRef } from 'react'
+import { gsap } from 'gsap'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -14,6 +17,23 @@ import MockResponse from './../../mock/ourTeam.json'
 import Logo from './../../assets/images/logo/logo.svg'
 
 function OurTeam() {
+  const containerReference = useRef<HTMLUListElement | null>(null)
+  const scrollAmount = 800
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (containerReference.current) {
+      const currentScroll = containerReference.current.scrollLeft
+      gsap.to(containerReference.current, {
+        scrollLeft:
+          direction === 'right'
+            ? currentScroll + scrollAmount
+            : currentScroll - scrollAmount,
+        duration: 0.5,
+        ease: 'power2.out'
+      })
+    }
+  }
+
   return (
     <section className={styles['container']}>
       <h1 className={styles['container__title']}>
@@ -26,7 +46,11 @@ function OurTeam() {
         </h2>
 
         <div className={styles['container__buttons']}>
-          <button type='button' className={styles['buttons__item']}>
+          <button
+            type='button'
+            className={styles['buttons__item']}
+            onClick={() => scroll('left')}
+          >
             <ArrowCircleLeft
               size={44}
               weight='thin'
@@ -34,7 +58,11 @@ function OurTeam() {
             />
           </button>
 
-          <button type='button' className={styles['buttons__item']}>
+          <button
+            type='button'
+            className={styles['buttons__item']}
+            onClick={() => scroll('right')}
+          >
             <ArrowCircleRight
               size={44}
               weight='thin'
@@ -44,7 +72,7 @@ function OurTeam() {
         </div>
       </div>
 
-      <ul className={styles['container__cards']}>
+      <ul className={styles['container__cards']} ref={containerReference}>
         {MockResponse.data.map((item, index) => (
           <li className={styles['cards__item']} key={index}>
             <div className={styles['item__context']}>
