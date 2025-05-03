@@ -1,9 +1,10 @@
 @use './../../styles/palette' as *;
 
 .container {
-  margin-top: 10.375rem;
+  max-width: calc(24.313rem * 4);
   padding-left: 2rem;
   padding-right: 1rem;
+  margin: 10.375rem auto;
 
   .container__title {
     font-size: 1.625rem;
