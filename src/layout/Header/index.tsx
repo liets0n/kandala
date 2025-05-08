@@ -1,10 +1,12 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import { usePathname } from 'next/navigation'
+import React, { useEffect, useState, useLayoutEffect, useRef } from 'react'
+import clsx from 'clsx'
+import { gsap } from 'gsap'
 import Link from 'next/link'
 import Image from 'next/image'
-import clsx from 'clsx'
+import { usePathname } from 'next/navigation'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { ArrowUpRight, List } from '@phosphor-icons/react/dist/ssr'
 
@@ -12,11 +14,40 @@ import styles from './styles.module.scss'
 import { Sidebar } from './../../components'
 import Logo from './../../assets/images/logo/full_logo_black.svg'
 
+gsap.registerPlugin(ScrollTrigger)
+
 function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  const triggerReference = useRef<HTMLDivElement | null>(null)
 
   const pathname = usePathname()
   const isUseInLegalPages = pathname.includes('legal')
+
+  useLayoutEffect(() => {
+    const header = triggerReference.current
+
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50
+
+      gsap.to(header, {
+        backgroundColor: isScrolled ? '#ffffff' : 'transparent',
+        boxShadow: isScrolled
+          ? '0px 4px 12px rgba(0, 0, 0, 0.06)'
+          : '0px 0px 0px rgba(0, 0, 0, 0)',
+        duration: 0.3,
+        ease: 'power2.out'
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll()
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   useEffect(() => {
     if (isSidebarOpen) {
@@ -25,6 +56,17 @@ function Header() {
     } else {
       document.body.style.position = ''
       document.body.style.overflow = ''
+    }
+
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll()
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [isSidebarOpen])
 
@@ -36,7 +78,7 @@ function Header() {
     <>
       {isSidebarOpen && <Sidebar onClose={handleIsSidebarOpenState} />}
 
-      <nav className={styles['container']}>
+      <nav className={styles['container']} ref={triggerReference}>
         <ul className={styles['container__list']}>
           <li
             className={`${styles['list__item']} ${styles['list__item--logo']}`}
@@ -86,7 +128,11 @@ function Header() {
         <div className={styles['container__rightSide']}>
           <Link
             href='/#contact'
-            className={`${styles['rightSide__link']} ${styles[clsx({ 'rightSide__link--bgGray': isUseInLegalPages })]}`}
+            className={clsx(
+              styles['rightSide__link'],
+              (isUseInLegalPages || hasScrolled) &&
+                styles['rightSide__link--bgGray']
+            )}
           >
             <p className={styles['link__text']}>Contactos</p>
 

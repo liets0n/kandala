@@ -2,9 +2,10 @@
 
 .container {
   width: 100%;
+  max-width: 86rem;
   display: flex;
   flex-direction: column;
-  margin-top: 10.375rem;
+  margin: 10.375rem auto;
   overflow: hidden;
 
   .container__copyRight {

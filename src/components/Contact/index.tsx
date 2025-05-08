@@ -31,6 +31,7 @@ const schemaValidation = z.object({
     .string()
     .min(1, { message: 'Campo obrigatório' })
     .email({ message: 'Endereço de E-mail inválido' }),
+  phoneNumber: z.string().min(1, { message: 'Campo obrigatório' }),
   subject: z
     .string()
     .min(1, { message: 'Campo obrigatório' })
@@ -93,7 +94,11 @@ function Contact() {
               Our friendly team is here to help you
             </p>
 
-            <p className={styles['email__address']}>support@kandala.com</p>
+            <p
+              className={`${styles['email__address']} ${styles['email__address--emphasis']}`}
+            >
+              support@kandala.com
+            </p>
           </div>
         </div>
 
@@ -103,11 +108,15 @@ function Contact() {
           <address className={styles['contact__context']}>
             <p className={styles['context__text']}>Mon-Fir from 8am to 5am</p>
 
-            <p className={styles['context__phone']}>
+            <p
+              className={`${styles['context__phone']} ${styles['context__phone--emphasis']}`}
+            >
               (+244) 932 334 800 - Luanda - Angola
             </p>
 
-            <p className={styles['context__phone']}>
+            <p
+              className={`${styles['context__phone']} ${styles['context__phone--emphasis']}`}
+            >
               (+351) 998 232 838 - Lisboa - Portugal
             </p>
           </address>
@@ -192,6 +201,32 @@ function Contact() {
             className={styles['wrapper__input']}
             {...register('email')}
           />
+
+          {errors.email?.message && (
+            <p className={styles['wrapper__error']}>{errors.email?.message}</p>
+          )}
+        </div>
+
+        <div className={styles['form__wrapper']}>
+          <label htmlFor='phoneNumber' className={styles['wrapper__label']}>
+            Número do Telefone
+          </label>
+
+          <div className={styles['wrapper__inputContainer']}>
+            <label
+              htmlFor='phoneNumber'
+              className={styles['inputContainer__label']}
+            >
+              +244
+            </label>
+
+            <input
+              type='text'
+              id='phoneNumber'
+              className={styles['inputContainer__input']}
+              {...register('phoneNumber')}
+            />
+          </div>
 
           {errors.email?.message && (
             <p className={styles['wrapper__error']}>{errors.email?.message}</p>

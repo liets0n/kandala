@@ -14,7 +14,7 @@ import MockResponse from './../../mock/ourServices.json'
 
 function OurServices() {
   const containerReference = useRef<HTMLUListElement | null>(null)
-  const scrollAmount = 800
+  const scrollAmount = 405
 
   const scroll = (direction: 'left' | 'right') => {
     if (containerReference.current) {

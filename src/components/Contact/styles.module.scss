@@ -17,22 +17,22 @@
 .container__info {
   width: 100%;
   max-width: 27.813rem;
-  min-height: 100%;
+  height: 54rem;
   padding: 2rem;
   background-color: $pink-50;
   border-radius: 8px;
 
   .info__title {
     min-width: 100%;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 1.5rem;
   }
 
   .info__office {
-    margin-top: 2rem;
+    margin-top: 6.375rem;
 
     .office__title {
-      font-weight: 500;
+      font-weight: bold;
       font-size: 1.125rem;
     }
 
@@ -53,7 +53,7 @@
     margin-top: 3rem;
 
     .email__title {
-      font-weight: 500;
+      font-weight: bold;
       font-size: 1.125rem;
     }
 
@@ -68,6 +68,10 @@
         color: $gray-200;
         font-size: 0.875rem;
       }
+
+      .email__address--emphasis {
+        font-weight: bold;
+      }
     }
   }
 
@@ -75,7 +79,7 @@
     margin-top: 3rem;
 
     .contact__title {
-      font-weight: 500;
+      font-weight: bold;
       font-size: 1.125rem;
     }
 
@@ -91,13 +95,17 @@
         font-size: 0.875rem;
       }
     }
+
+    .context__phone--emphasis {
+      font-weight: bold;
+    }
   }
 
   .info__socialMedia {
     margin-top: 3rem;
 
     .socialMedia__title {
-      font-weight: 500;
+      font-weight: bold;
       font-size: 1.125rem;
     }
 
@@ -142,11 +150,29 @@
     width: 100%;
     gap: 0.5rem;
 
-    .wrapper__label {
-      font-family: 500;
-      width: max-content;
+    .wrapper__inputContainer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .inputContainer__label {
+        font-size: 0.875rem;
+        font-weight: bold;
+        color: $gray-200;
+      }
+
+      .inputContainer__input {
+        width: 100%;
+        border: none;
+      }
     }
 
+    .wrapper__label {
+      width: max-content;
+      color: $brown;
+    }
+
+    .wrapper__inputContainer,
     .wrapper__input {
       width: 100%;
       height: 3.563rem;

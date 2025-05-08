@@ -40,7 +40,8 @@
     .leftSide__subtitle {
       font-size: 1.625rem;
       margin-top: 1rem;
-      font-weight: 500;
+      font-weight: bold;
+      color: $brown;
     }
 
     .leftSide__paragraph {
@@ -128,7 +129,7 @@
     }
 
     .item__title {
-      font-weight: 500;
+      font-weight: bold;
       font-size: 1.25rem;
       line-height: 2.688rem;
       margin-top: 1rem;

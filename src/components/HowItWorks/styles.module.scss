@@ -2,7 +2,7 @@
 
 .container {
   margin-top: 10.375rem;
-  padding: 0 2rem;
+  padding-left: 9.25rem;
   overflow: hidden;
 
   .container__title {
@@ -21,7 +21,7 @@
   .container__buttons {
     display: none;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 0.3rem;
 
     .buttons__item {
       width: 2.75rem;
@@ -73,7 +73,9 @@
             gap: 0.5rem;
 
             .texts__title {
-              font-weight: 500;
+              max-width: 22rem;
+              font-size: 2rem;
+              font-weight: bold;
               line-height: 2.688rem;
             }
 
@@ -81,16 +83,16 @@
               font-size: 0.875rem;
               line-height: 1.313rem;
               font-weight: 100;
-              color: $gray-200;
+              color: $brown;
             }
           }
         }
 
         &::before {
           content: '';
-          width: 2px;
+          width: 1px;
           border-radius: 8px;
-          background-color: $black;
+          background-color: $brown;
         }
       }
 
@@ -99,6 +101,10 @@
         height: 27rem;
       }
     }
+  }
+
+  @media (width <= 1131px) {
+    padding-left: 1rem;
   }
 
   @media (width <= 1024px) {
@@ -130,7 +136,7 @@
 
   @media (width <= 665px) {
     margin-top: 3.875rem;
-    padding: 0 1rem;
+    padding-left: 1rem;
 
     .container__subtitle {
       max-width: 25rem;

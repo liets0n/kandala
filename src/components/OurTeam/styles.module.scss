@@ -2,8 +2,7 @@
 
 .container {
   max-width: calc(24.313rem * 4);
-  padding-left: 2rem;
-  padding-right: 1rem;
+  padding-left: 9.25rem;
   margin: 10.375rem auto;
 
   .container__title {
@@ -16,6 +15,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    padding-right: 1rem;
 
     .container__subtitle {
       max-width: 47.125rem;
@@ -165,6 +165,10 @@
         }
       }
     }
+  }
+
+  @media (width <= 1131px) {
+    padding-left: 1rem;
   }
 
   @media (width <= 1227px) {

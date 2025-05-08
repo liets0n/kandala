@@ -181,7 +181,13 @@
       }
 
       .album__left {
+        position: relative;
+
         .left__pictor {
+          position: absolute;
+          bottom: -3rem;
+          left: -1rem;
+
           &:nth-child(3),
           &:nth-child(2) {
             display: none;
@@ -199,7 +205,12 @@
       }
 
       .album__right {
+        position: relative;
+
         .right__pictor {
+          position: absolute;
+          top: -9rem;
+
           &:nth-child(2),
           &:nth-child(3) {
             display: none;

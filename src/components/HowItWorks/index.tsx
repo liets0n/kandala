@@ -77,13 +77,13 @@ function HowItWorks() {
         sectionReference.current,
         { translateX: 0 },
         {
-          translateX: '-303vw',
+          translateX: '-306vw',
           ease: 'none',
           duration: 1,
           scrollTrigger: {
             trigger: triggerReference.current,
             scrub: 1,
-            start: 'top top',
+            start: 'top 70',
             end: '2000 top',
             pin: true
           }
