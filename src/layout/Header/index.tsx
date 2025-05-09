@@ -78,79 +78,81 @@ function Header() {
     <>
       {isSidebarOpen && <Sidebar onClose={handleIsSidebarOpenState} />}
 
-      <nav className={styles['container']} ref={triggerReference}>
-        <ul className={styles['container__list']}>
-          <li
-            className={`${styles['list__item']} ${styles['list__item--logo']}`}
-          >
-            <Link href='/'>
-              <Image src={Logo} alt='Logo' className={styles['logo']} />
+      <header ref={triggerReference} className={styles['wrapper']}>
+        <nav className={styles['container']}>
+          <ul className={styles['container__list']}>
+            <li
+              className={`${styles['list__item']} ${styles['list__item--logo']}`}
+            >
+              <Link href='/'>
+                <Image src={Logo} alt='Logo' className={styles['logo']} />
+              </Link>
+            </li>
+
+            <li className={styles['list__item']}>
+              <Link href='/#home' className={styles['item__link']}>
+                <p className={styles['link__text']}>Home</p>
+              </Link>
+            </li>
+
+            <li className={styles['list__item']}>
+              <Link href='/#whoweare' className={styles['item__link']}>
+                <p className={styles['link__text']}>Quem Somos</p>
+              </Link>
+            </li>
+
+            <li className={styles['list__item']}>
+              <Link href='/#ourservices' className={styles['item__link']}>
+                <p className={styles['link__text']}>Nossos Serviços</p>
+              </Link>
+            </li>
+
+            <li className={styles['list__item']}>
+              <Link href='/#howitworks' className={styles['item__link']}>
+                <p className={styles['link__text']}>Como Funciona</p>
+              </Link>
+            </li>
+
+            <li className={styles['list__item']}>
+              <Link href='/#testimonials' className={styles['item__link']}>
+                <p className={styles['link__text']}>Depoimentos</p>
+              </Link>
+            </li>
+
+            <li className={styles['list__item']}>
+              <Link href='/#faq' className={styles['item__link']}>
+                <p className={styles['link__text']}>FAQ&apos;s</p>
+              </Link>
+            </li>
+          </ul>
+
+          <div className={styles['container__rightSide']}>
+            <Link
+              href='/#contact'
+              className={clsx(
+                styles['rightSide__link'],
+                (isUseInLegalPages || hasScrolled) &&
+                  styles['rightSide__link--bgGray']
+              )}
+            >
+              <p className={styles['link__text']}>Contactos</p>
+
+              <span className={styles['link__iconContainer']}>
+                <ArrowUpRight
+                  size={18}
+                  className={styles['iconContainer__icon']}
+                />
+              </span>
             </Link>
-          </li>
 
-          <li className={styles['list__item']}>
-            <Link href='/#home' className={styles['item__link']}>
-              <p className={styles['link__text']}>Home</p>
-            </Link>
-          </li>
-
-          <li className={styles['list__item']}>
-            <Link href='/#whoweare' className={styles['item__link']}>
-              <p className={styles['link__text']}>Quem Somos</p>
-            </Link>
-          </li>
-
-          <li className={styles['list__item']}>
-            <Link href='/#ourservices' className={styles['item__link']}>
-              <p className={styles['link__text']}>Nossos Serviços</p>
-            </Link>
-          </li>
-
-          <li className={styles['list__item']}>
-            <Link href='/#howitworks' className={styles['item__link']}>
-              <p className={styles['link__text']}>Como Funciona</p>
-            </Link>
-          </li>
-
-          <li className={styles['list__item']}>
-            <Link href='/#testimonials' className={styles['item__link']}>
-              <p className={styles['link__text']}>Depoimentos</p>
-            </Link>
-          </li>
-
-          <li className={styles['list__item']}>
-            <Link href='/#faq' className={styles['item__link']}>
-              <p className={styles['link__text']}>FAQ&apos;s</p>
-            </Link>
-          </li>
-        </ul>
-
-        <div className={styles['container__rightSide']}>
-          <Link
-            href='/#contact'
-            className={clsx(
-              styles['rightSide__link'],
-              (isUseInLegalPages || hasScrolled) &&
-                styles['rightSide__link--bgGray']
-            )}
-          >
-            <p className={styles['link__text']}>Contactos</p>
-
-            <span className={styles['link__iconContainer']}>
-              <ArrowUpRight
-                size={18}
-                className={styles['iconContainer__icon']}
-              />
-            </span>
-          </Link>
-
-          <List
-            size={32}
-            className={styles['rightSide__menu']}
-            onClick={handleIsSidebarOpenState}
-          />
-        </div>
-      </nav>
+            <List
+              size={32}
+              className={styles['rightSide__menu']}
+              onClick={handleIsSidebarOpenState}
+            />
+          </div>
+        </nav>
+      </header>
     </>
   )
 }

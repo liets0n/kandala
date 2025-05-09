@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import styles from './styles.module.scss'
 import Logo from './../../assets/images/logo/full_logo_black.svg'
+import Kandala from './../../assets/images/KANDALA.svg'
 
 function Footer() {
   return (
@@ -96,7 +97,11 @@ function Footer() {
         &copy; 2025 - Kandala, todos direitos reservados.
       </p>
 
-      <p className={styles['container__kandala']}>KANDALA</p>
+      <Image
+        src={Kandala}
+        alt='Kandala'
+        className={styles['container__kandala']}
+      />
     </footer>
   )
 }

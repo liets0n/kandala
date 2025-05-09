@@ -17,7 +17,7 @@ import {
 
 function Home() {
   return (
-    <main>
+    <main style={{ position: 'relative' }}>
       <HeroSection />
       <Brands />
       <WhoWeAre />
