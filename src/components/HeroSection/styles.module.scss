@@ -79,9 +79,14 @@
 
     .album__left,
     .album__right {
-      .left__pictor
+      .left__pictor,
       .right__pictor {
+        margin-top: -3.5rem;
         z-index: 1;
+
+        &:first-child {
+          margin: 0;
+        }
       }
     }
 

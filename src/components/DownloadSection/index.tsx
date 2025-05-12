@@ -9,38 +9,40 @@ import AppStore from './../../assets/images/appstore.svg'
 function DownloadSection() {
   return (
     <section className={styles['container']}>
-      <h1 className={styles['container__title']}>
-        A beleza que você deseja, na palma da sua mão.
-      </h1>
+      <div className={styles['wrapper']}>
+        <h1 className={styles['wrapper__title']}>
+          A beleza que você deseja, na palma da sua mão.
+        </h1>
 
-      <h2 className={styles['container__subtitle']}>
-        Encontre o cuidado perfeito para o seu cabelo com apenas um clique
-        simples.
-      </h2>
+        <h2 className={styles['wrapper__subtitle']}>
+          Encontre o cuidado perfeito para o seu cabelo com apenas um clique
+          simples.
+        </h2>
 
-      <p className={styles['container__description']}>
-        Com nossa app, você descobre os melhores profissionais e salões para
-        transformar seu cabelo, onde quer que esteja. Agende cortes, colorações
-        ou tratamentos com facilidade, personalize sua experiência e aproveite o
-        visual
-      </p>
+        <p className={styles['wrapper__description']}>
+          Com nossa app, você descobre os melhores profissionais e salões para
+          transformar seu cabelo, onde quer que esteja. Agende cortes,
+          colorações ou tratamentos com facilidade, personalize sua experiência
+          e aproveite o visual
+        </p>
 
-      <div className={styles['container__buttons']}>
-        <Link href='#' className={styles['buttons__link']}>
-          <Image
-            src={PlayStore}
-            alt='PlayStore'
-            className={styles['link__image']}
-          />
-        </Link>
+        <div className={styles['wrapper__buttons']}>
+          <Link href='#' className={styles['buttons__link']}>
+            <Image
+              src={PlayStore}
+              alt='PlayStore'
+              className={styles['link__image']}
+            />
+          </Link>
 
-        <Link href='#' className={styles['buttons__link']}>
-          <Image
-            src={AppStore}
-            alt='AppStore'
-            className={styles['link__image']}
-          />
-        </Link>
+          <Link href='#' className={styles['buttons__link']}>
+            <Image
+              src={AppStore}
+              alt='AppStore'
+              className={styles['link__image']}
+            />
+          </Link>
+        </div>
       </div>
     </section>
   )

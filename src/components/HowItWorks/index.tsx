@@ -154,13 +154,16 @@ function HowItWorks() {
                 </div>
               </div>
 
-              <Image
-                src={item.pictor}
-                width='548'
-                height='432'
-                alt=''
-                className={styles['item__image']}
-              />
+              <div className={styles['item__imageWrapper']}>
+                <div className={styles['imageWrapper__block']}></div>
+                <Image
+                  src={item.pictor}
+                  width='548'
+                  height='432'
+                  alt=''
+                  className={styles['imageWrapper__img']}
+                />
+              </div>
             </li>
           ))}
         </ul>

@@ -1,10 +1,9 @@
 @use './../../styles/palette' as *;
 
 .container {
-  max-width: calc(24.313rem * 4);
+  max-width: 86rem;
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
   margin: 0 auto;
   margin-top: 6rem;
 
@@ -148,6 +147,10 @@
       padding: 0 1rem;
       justify-content: center;
     }
+  }
+
+  @media (width <= 1416px) {
+    padding: 0 2rem;
   }
 
   @media (width <= 744px) {

@@ -96,9 +96,26 @@
         }
       }
 
-      .item__image {
-        width: 34.25rem;
-        height: 27rem;
+      .item__imageWrapper {
+        position: relative;
+
+        .imageWrapper__block {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 34.25rem;
+          height: 24.938rem;
+          background-color: $gray-50;
+          z-index: 1;
+        }
+
+        .imageWrapper__img {
+          position: relative;
+          width: 34.25rem;
+          height: 27rem;
+          z-index: 12;
+        }
       }
     }
   }
