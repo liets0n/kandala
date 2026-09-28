@@ -1,60 +1,38 @@
-<div align="center">
-  <img src="./src/assets/images/logo/logo.svg"  alt="Logo" width="100" />
-
-  # Kandala
-
-  Descubra uma nova rotina de beleza personalizada
+<div align="left">
 
   ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
   ![TypeScript](https://img.shields.io/badge/typescript-000000.svg?style=for-the-badge&logo=typescript&logoColor=white)
   ![SASS](https://img.shields.io/badge/SASS-black.svg?style=for-the-badge&logo=SASS&logoColor=white)
-  ![NPM](https://img.shields.io/badge/NPM-000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+  ![PNPM](https://img.shields.io/badge/PNPM-000000.svg?style=for-the-badge&logo=pnpm&logoColor=white)
   ![GitHub](https://img.shields.io/badge/github-black.svg?style=for-the-badge&logo=github&logoColor=white)
   ![Git](https://img.shields.io/badge/git-black.svg?style=for-the-badge&logo=git&logoColor=white)
   [![Version](https://img.shields.io/badge/Version-1.0.0-green?style=for-the-badge&color=black)]()
 </div>
 
-<br />
-<br />
 
-## Visão Geral
-Somos mais do que uma aplicação de beleza — somos a sua parceira para realçar o que há de melhor em você. Com uma plataforma intuitiva, conectamos você a profissionais de confiança, oferecendo serviços personalizados que se encaixam na sua rotina. Seja para um momento de cuidado ou uma transformação completa, estamos aqui para tornar cada experiência única, prática e inesquecível.
+## :flight_departure: Run the project locally
 
-## Tecnologias
+To run the project in your local environment, follow these steps:
 
-- Next.js
-- Sass
-- TypeScript
-- Zod
-- Hooke Form
-- clx
-- Notistack
-- Phosphor Icons
-- Gsap
+1. Clone the repository to your local machine.
+2. Run `pnpm i` in the project directory to install the required dependencies.
+3. Run `pnpm run dev` to get the project started.
+4. Open [http://localhost:3000](http://localhost:3000) (or the address shown in your console).
 
-## Como Executar
-
-Para executar o projeto siga as seguintes etapas:
-
-1. Clona o repositório na sua maquina.
-2. Execute `pnpm i` no diretório do projeto para instalar as dependências.
-3. Execute `pnpm run dev` para iniciar o projeto.
-4. Abra `http://localhost:3000` (ou o endereço apresentado no seu console) no seu browser.
-
-## Estrutura de pastas do projeto
+## :building_construction: Project folder structure
 
 ```
 .
 ├── src
-|   ├── styles       # Contém todos os estilos globais da lading page.
-|   ├── mock         # Contém todos os mocks data.
-|   ├── layouts      # Contém todos os componentes que serão visíveis em todas as páginas ou na maioria.
-|   ├── components   # Contém todos os componentes da lading page. 
-|   ├── assets       # Contém todos os arquivos estáticos da lading page.
-|   |   ├── images   # Contém das as imagens usadas na lading page. 
-|   |   └── fonts    # Contém todas as fontes externas usadas na lading page.
-|   └── app          # Contém toda regra de negócio da lading page.
+|   ├── styles       # Contains all global styles for the landing page.
+|   ├── mock         # Contains all mock data.
+|   ├── layouts      # Contains all components that will be visible on all or most pages.
+|   ├── components   # Contains all landing page components.
+|   ├── assets       # Contains all static files for the landing page.
+|   |   ├── images   # Contains all images used on the landing page.
+|   |   └── fonts    # Contains all external fonts used on the landing page.
+|   └── app          # Contains all business logic for the landing page.
 |
-├── public           # Contém todos os ficheiros estáticos que serão servidos diretamente pelo servidor web.
-└── .husky           # Contém os arquivos de configuração do husky.
+├── public           # Contains all static files that will be served directly by the web server.
+└── .husky           # Contains Husky configuration files.
 ```
