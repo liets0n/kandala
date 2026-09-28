@@ -16,7 +16,7 @@ To run the project in your local environment, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Run `pnpm i` in the project directory to install the required dependencies.
-3. Run `pnpm run start` to get the project started.
+3. Run `pnpm run dev` to get the project started.
 4. Open [http://localhost:3000](http://localhost:3000) (or the address shown in your console).
 
 ## :building_construction: Project folder structure
