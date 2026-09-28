@@ -49,25 +49,21 @@ function HowItWorks() {
   const sectionReference = useRef<HTMLUListElement | null>(null)
   const triggerReference = useRef<HTMLDivElement | null>(null)
 
-  const scrollAmount = window.innerWidth * 0.9
+  const handleScroll = useCallback((direction: 'left' | 'right') => {
+    if (sectionReference.current) {
+      const currentScroll = sectionReference.current.scrollLeft
+      const scrollAmount = window.innerWidth * 0.9
 
-  const handleScroll = useCallback(
-    (direction: 'left' | 'right') => {
-      if (sectionReference.current) {
-        const currentScroll = sectionReference.current.scrollLeft
-
-        gsap.to(sectionReference.current, {
-          scrollLeft:
-            direction === 'right'
-              ? currentScroll + scrollAmount
-              : currentScroll - scrollAmount,
-          duration: 0.5,
-          ease: 'power2.out'
-        })
-      }
-    },
-    [scrollAmount]
-  )
+      gsap.to(sectionReference.current, {
+        scrollLeft:
+          direction === 'right'
+            ? currentScroll + scrollAmount
+            : currentScroll - scrollAmount,
+        duration: 0.5,
+        ease: 'power2.out'
+      })
+    }
+  }, [])
 
   useLayoutEffect(() => {
     const mm = gsap.matchMedia()
